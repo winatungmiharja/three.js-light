@@ -1,0 +1,37 @@
+{
+  //#region  //*=========== Commons ===========
+  "Region": {
+    "prefix": "reg",
+    "scope": "javascript",
+    "body": [
+      "//#region  //*=========== ${1} ===========",
+      "${TM_SELECTED_TEXT}$0",
+      "//#endregion  //*======== ${1} ==========="
+    ]
+  },
+  "Region CSS": {
+    "prefix": "regc",
+    "scope": "css, scss",
+    "body": [
+      "/* #region  /**=========== ${1} =========== */",
+      "${TM_SELECTED_TEXT}$0",
+      "/* #endregion  /**======== ${1} =========== */"
+    ]
+  },
+  //#endregion  //*======== Commons ===========
+
+  //#region  //*=========== Snippet Wrap ===========
+  "Wrap with Fragment": {
+    "prefix": "ff",
+    "body": ["<>", "\t${TM_SELECTED_TEXT}", "</>"]
+  },
+  "Wrap with clsx": {
+    "prefix": "cx",
+    "body": ["{clsx(${TM_SELECTED_TEXT}$0)}"]
+  },
+  "Wrap with clsxm": {
+    "prefix": "cxm",
+    "body": ["{clsxm(${TM_SELECTED_TEXT}$0, className)}"]
+  }
+  //#endregion  //*======== Snippet Wrap ===========
+}

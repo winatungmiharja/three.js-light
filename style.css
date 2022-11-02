@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Heebo:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* #region  /**=========== General =========== */
+#c {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  --dark-gray: #818181;
+  --gray: #f3f3f3;
+  --dark: #292929;
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+  background-color: var(--gray);
+  margin: 0;
+  position: relative;
+  display: flex;
+}
+/* #endregion  /**======== General =========== */
+
+/* #region  /**=========== Typography =========== */
+h1 {
+  font-family: "Heebo", sans-serif;
+  font-size: clamp(2em, 4vw, 4em);
+  line-height: 120%;
+  margin: 0;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+h2 {
+  font-family: "Heebo", sans-serif;
+  font-size: clamp(1em, 2vw, 1.5em);
+  line-height: 120%;
+  margin: 0;
+  font-weight: 400;
+  color: var(--dark);
+}
+
+p {
+  font-family: "Courier New", Courier, monospace;
+  font-size: clamp(1em, 2vw, 1.25em);
+  line-height: 0;
+}
+
+a {
+  color: var(--dark-gray);
+  text-decoration: none;
+  transition: all ease-in 200ms;
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+
+a::after {
+  content: "";
+}
+a:hover::after {
+  content: ">";
+}
+/* #endregion  /**======== Typography =========== */
+
+/* #region  /**=========== Foreground =========== */
+.foreground {
+  height: 100%;
+  margin: auto;
+  width: 80%;
+  height: 80vh;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20%;
+}
+
+.foreground-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title-redirect {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.25em;
+  margin-top: 1em;
+}
+
+.foreground-content {
+  text-align: right;
+}
+/* #endregion  /**======== Foreground =========== */
+
+/* #region  /**=========== Background =========== */
+.background {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  margin-left: 50%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.image {
+  position: absolute;
+}
+
+#img-bulb {
+  width: 40%;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: 3;
+  animation: go-up 10s infinite ease;
+}
+
+#img-spherical {
+  width: 25%;
+  bottom: 7.5%;
+  right: 10%;
+  z-index: 2;
+}
+
+#img-rectangle {
+  width: 75%;
+  bottom: 2.5%;
+  right: 0;
+  translate: 50% 0;
+}
+
+#img-squiggle {
+  width: 50%;
+  bottom: 15%;
+  left: 0;
+}
+/* #endregion  /**======== Background =========== */
+
+/* #region  /**=========== Keyframes =========== */
+
+@keyframes go-up {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(5%, -5%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+/* #endregion  /**======== Keyframes =========== */
+
+/* #region  /**=========== Responsive =========== */
+@media screen and (max-width: 768px) {
+  .foreground {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .background {
+    margin-left: 0;
+    width: 100%;
+  }
+  #img-bulb {
+    width: 50%;
+    top: auto;
+    bottom: 15%;
+    right: 5%;
+    left: auto;
+    translate: 0 0;
+  }
+  #img-spherical {
+    display: none;
+  }
+}
+/* #endregion  /**======== Responsive =========== */
