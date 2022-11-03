@@ -69,3 +69,7 @@ Directional Light dan Ambient Light
 
 ![image](https://user-images.githubusercontent.com/64743796/199727323-6ac344b9-1fa3-4797-af98-93771b4269c3.png)
 
+
+- Menambahkan banyak cahaya
+
+![image](https://user-images.githubusercontent.com/64743796/199729459-24ba6e1f-1850-4d57-908a-a790b5244fa7.png)
