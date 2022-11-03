@@ -51,3 +51,21 @@ akses pilihan dan jenis-jenis light untuk mecoba-coba
 - Rect Area Light
 
 <img width="959" alt="image" src="https://user-images.githubusercontent.com/64743796/199546878-c645c7e5-9a2e-4e07-a92e-2d13d9fd7871.png">
+
+## Menmabahkan lebih dari satu cahaya
+
+- kita bisa menambahkan lebih dari satu cahaya, caranya yaitu 
+- membuat light baru dan menambahkan ke scene, contohnya adalah sebagai berikut
+
+
+Directional Light dan Ambient Light
+- kita akan meng-copy inisialisasi Ambient Light
+
+![image](https://user-images.githubusercontent.com/64743796/199727128-230456d2-a5c4-43b5-988f-92b7a555748e.png)
+
+- kemudian tinggal di paste pada Directional Light
+
+![image](https://user-images.githubusercontent.com/64743796/199727242-163feac3-7dee-411c-852b-bd3eab3c9111.png)
+
+![image](https://user-images.githubusercontent.com/64743796/199727323-6ac344b9-1fa3-4797-af98-93771b4269c3.png)
+
